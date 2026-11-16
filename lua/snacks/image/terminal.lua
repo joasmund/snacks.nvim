@@ -24,6 +24,15 @@ local environments = {
     placeholders = false,
   },
   {
+    -- Rex is built on libghostty and supports the Kitty graphics protocol.
+    -- Detected via TERM_PROGRAM, the same signal other Kitty-protocol
+    -- clients (e.g. kitty-graphics.el) use to recognize Rex.
+    name = "rex",
+    env = { TERM_PROGRAM = "rex" },
+    supported = true,
+    placeholders = true,
+  },
+  {
     name = "tmux",
     env = { TERM = "tmux", TMUX = true },
     setup = function()

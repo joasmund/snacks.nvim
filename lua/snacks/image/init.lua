@@ -18,7 +18,7 @@ local M = setmetatable({}, {
 })
 
 M.meta = {
-  desc = "Image viewer using Kitty Graphics Protocol, supported by `kitty`, `wezterm` and `ghostty`",
+  desc = "Image viewer using Kitty Graphics Protocol, supported by `kitty`, `wezterm`, `ghostty` and `rex`",
   needs_setup = true,
 }
 
@@ -374,7 +374,7 @@ function M.health()
     Snacks.health.warn("image viewer is enabled with `opts.force = true`. Use at your own risk")
   else
     Snacks.health.error("your terminal does not support the kitty graphics protocol")
-    Snacks.health.info("supported terminals: `kitty`, `wezterm`, `ghostty`")
+    Snacks.health.info("supported terminals: `kitty`, `wezterm`, `ghostty`, `rex`")
   end
 end
 
